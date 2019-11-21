@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Shareable stylelint config for SCSS",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --ignore-path .gitignore .",
+    "lint:fix": "eslint --ignore-path .gitignore . --fix"
   },
   "publishConfig": {
     "access": "public"
@@ -22,5 +24,30 @@
   "bugs": {
     "url": "https://github.com/luciancooper/stylelint-config-scss/issues"
   },
-  "homepage": "https://github.com/luciancooper/stylelint-config-scss#readme"
+  "homepage": "https://github.com/luciancooper/stylelint-config-scss#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@lcooper"
+    ]
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@lcooper/commitlint-config": "^1.0.0",
+    "@lcooper/eslint-config": "^1.0.0",
+    "eslint": "^6.6.0",
+    "eslint-plugin-import": "^2.18.2",
+    "husky": "^3.1.0",
+    "lint-staged": "^9.4.3"
+  }
 }
