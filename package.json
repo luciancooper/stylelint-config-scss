@@ -2,6 +2,7 @@
   "name": "@lcooper/stylelint-config-scss",
   "version": "1.0.0",
   "description": "Shareable stylelint config for SCSS",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint --ignore-path .gitignore .",
@@ -41,6 +42,10 @@
       "eslint"
     ]
   },
+  "dependencies": {
+    "stylelint-order": "^3.1.1",
+    "stylelint-scss": "^3.13.0"
+  },
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
     "@lcooper/commitlint-config": "^1.0.0",
@@ -48,6 +53,10 @@
     "eslint": "^6.6.0",
     "eslint-plugin-import": "^2.18.2",
     "husky": "^3.1.0",
-    "lint-staged": "^9.4.3"
+    "lint-staged": "^9.4.3",
+    "stylelint": "^12.0.0"
+  },
+  "peerDependencies": {
+    "stylelint": "^10.0.1 || ^11.0.0 || ^12.0.0"
   }
 }
