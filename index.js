@@ -228,8 +228,10 @@ module.exports = {
         'at-rule-semicolon-newline-after': 'always',
         // at-rules - Require a single space or disallow whitespace before the semicolons of at-rules.
         'at-rule-semicolon-space-before': 'never',
-        // at-rules - Specify a blacklist of disallowed at-rules.
-        'at-rule-blacklist': 'debug',
+        // at-rules - Specify a list of disallowed at-rules.
+        'at-rule-disallowed-list': [
+            'debug',
+        ],
         // at-rules - This is a rule that checks for situations where users have done a loop using map-keys and grabbed the value for that key inside of the loop.
         'scss/at-each-key-value-single-line': true,
         // at-rules - Require or disallow a newline after the closing brace of @else statements (Autofixable).
