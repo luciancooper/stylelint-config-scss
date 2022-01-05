@@ -4,6 +4,7 @@ module.exports = {
         'stylelint-order',
         'stylelint-scss',
     ],
+    customSyntax: require('postcss-scss'),
     rules: {
         // general - Specify indentation (Autofixable).
         indentation: 4,
