@@ -86,8 +86,6 @@ module.exports = {
         'media-feature-name-no-vendor-prefix': true,
         // vendor-prefix - Disallow vendor prefixes for at-rules.
         'at-rule-no-vendor-prefix': true,
-        // functions - Disallow an invalid expression within calc functions.
-        'function-calc-no-invalid': true,
         // functions - Disallow an unspaced operator within calc functions.
         'function-calc-no-unspaced-operator': true,
         // functions - Disallow direction values in linear-gradient() calls that are not valid according to the standard syntax.
